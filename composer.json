@@ -1,7 +1,7 @@
 {
   "name": "metrixwire/php",
   "description": "Zero-config APM SDK for PHP — native, Laravel, Symfony, Slim/PSR-15 & WordPress. Detects N+1 queries, slow endpoints & slow queries.",
-  "keywords": ["apm", "performance", "monitoring", "n+1", "laravel", "symfony", "slim", "wordpress"],
+  "keywords": ["apm", "performance", "monitoring", "n-plus-one", "laravel", "symfony", "slim", "wordpress"],
   "type": "library",
   "license": "MIT",
   "require": {
