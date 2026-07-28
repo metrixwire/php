@@ -1,0 +1,33 @@
+{
+  "name": "metrixwire/php",
+  "description": "Zero-config APM SDK for PHP — native, Laravel, Symfony, Slim/PSR-15 & WordPress. Detects N+1 queries, slow endpoints & slow queries.",
+  "keywords": ["apm", "performance", "monitoring", "n+1", "laravel", "symfony", "slim", "wordpress"],
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=8.1"
+  },
+  "require-dev": {
+    "illuminate/support": "^10.0 || ^11.0 || ^12.0",
+    "symfony/http-kernel": "^6.0 || ^7.0",
+    "symfony/event-dispatcher": "^6.0 || ^7.0",
+    "psr/http-server-middleware": "^1.0",
+    "doctrine/dbal": "^3.0"
+  },
+  "suggest": {
+    "symfony/http-kernel": "Auto-trace Symfony requests via MetrixWire\\Symfony\\MetrixWireSubscriber",
+    "psr/http-server-middleware": "Auto-trace Slim/Mezzio/any PSR-15 app via MetrixWire\\Psr15\\MetrixWireMiddleware",
+    "doctrine/dbal": "Capture Doctrine queries via MetrixWire\\Symfony\\DoctrineSqlLogger (DBAL 2/3)"
+  },
+  "autoload": {
+    "psr-4": {
+      "MetrixWire\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": ["MetrixWire\\Laravel\\MetrixWireServiceProvider"]
+    }
+  },
+  "minimum-stability": "stable"
+}
