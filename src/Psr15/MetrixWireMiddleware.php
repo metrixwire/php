@@ -25,7 +25,7 @@ final class MetrixWireMiddleware implements MiddlewareInterface
     {
         MetrixWire::init([
             'apiKey' => (string) (getenv('METRIXWIRE_KEY') ?: ''),
-            'endpoint' => (string) (getenv('METRIXWIRE_ENDPOINT') ?: 'http://localhost:3000'),
+            'endpoint' => (string) (getenv('METRIXWIRE_ENDPOINT') ?: 'https://metrixwire.com'),
             'enabled' => filter_var(getenv('METRIXWIRE_ENABLED') ?: 'true', FILTER_VALIDATE_BOOLEAN),
         ]);
     }

@@ -12,7 +12,7 @@ Add to your environment:
 
 ```dotenv
 METRIXWIRE_KEY=mw_xxx
-METRIXWIRE_ENDPOINT=http://localhost:3000
+METRIXWIRE_ENDPOINT=https://metrixwire.com
 ```
 
 Then pick the integration for your stack — each one is automatic once wired.
@@ -48,13 +48,25 @@ $app->add(new \MetrixWire\Psr15\MetrixWireMiddleware());
 
 ## WordPress
 
-Copy `wordpress/metrixwire.php` into `wp-content/mu-plugins/` and set in `wp-config.php`:
+Two options, same underlying SDK:
 
-```php
-define('METRIXWIRE_KEY', 'mw_xxx');
-define('METRIXWIRE_ENDPOINT', 'http://localhost:3000');
-define('SAVEQUERIES', true); // required for per-query spans
-```
+- **Installable plugin (recommended)** — `wordpress-plugin/metrixwire-apm/` is a standalone plugin with no
+  Composer dependency (the SDK core is vendored in). Upload the `metrixwire-apm` folder to
+  `wp-content/plugins/`, activate it, then configure the API key and endpoint under
+  **Settings → MetrixWire** (includes a "Test Connection" check). See
+  `wordpress-plugin/metrixwire-apm/readme.txt`.
+- **Must-use plugin** — for the earliest possible trace start (before regular plugins load) or when you
+  already manage the SDK via Composer, copy `wordpress/metrixwire.php` into `wp-content/mu-plugins/` and
+  set in `wp-config.php`:
+
+  ```php
+  define('METRIXWIRE_KEY', 'mw_xxx');
+  define('METRIXWIRE_ENDPOINT', 'https://metrixwire.com');
+  define('SAVEQUERIES', true); // required for per-query spans
+  ```
+
+Both variants read `SAVEQUERIES` the same way — it must be a `wp-config.php` constant, since WordPress
+reads it before any plugin (mu or regular) loads.
 
 ## Native PHP (no framework) — fully automatic
 
@@ -80,7 +92,7 @@ $pdo = new \MetrixWire\PDO($dsn, $user, $pass); // instead of new \PDO(...)
 | Env | Default | Notes |
 |---|---|---|
 | `METRIXWIRE_KEY` | *(empty)* | Project API key. Empty = SDK disabled. |
-| `METRIXWIRE_ENDPOINT` | `http://localhost:3000` | API base URL (a full `/ingest` URL also works). |
+| `METRIXWIRE_ENDPOINT` | `https://metrixwire.com` | API base URL (a full `/ingest` URL also works). |
 | `METRIXWIRE_ENABLED` | `true` | Set to `false` to disable entirely. |
 
 ## Non-blocking

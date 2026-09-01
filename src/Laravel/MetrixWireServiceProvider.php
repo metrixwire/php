@@ -34,7 +34,7 @@ final class MetrixWireServiceProvider extends ServiceProvider
     {
         MetrixWire::init([
             'apiKey' => (string) env('METRIXWIRE_KEY', ''),
-            'endpoint' => (string) env('METRIXWIRE_ENDPOINT', 'http://localhost:3000'),
+            'endpoint' => (string) env('METRIXWIRE_ENDPOINT', 'https://metrixwire.com'),
             'enabled' => (bool) env('METRIXWIRE_ENABLED', true),
         ]);
 

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<ruleset name="MetrixWire APM">
+	<description>WordPress coding standards for the MetrixWire APM plugin.</description>
+
+	<file>metrixwire-apm</file>
+	<!-- Vendored copy of metrixwire/php — follows the Composer package's own style. -->
+	<exclude-pattern>*/includes/sdk/*</exclude-pattern>
+
+	<arg name="extensions" value="php"/>
+	<arg name="basepath" value="."/>
+	<arg value="ps"/>
+
+	<rule ref="WordPress">
+		<!-- Namespaced OOP plugin: PSR-style class and method names are intentional. -->
+		<exclude name="WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase"/>
+	</rule>
+
+	<config name="minimum_wp_version" value="6.0"/>
+	<config name="testVersion" value="8.1-"/>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array" value="metrixwire-apm"/>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array" value="metrixwire_apm,MetrixWire\APM"/>
+		</properties>
+	</rule>
+</ruleset>

@@ -9,7 +9,7 @@
  * Configure with constants in wp-config.php:
  *
  *   define('METRIXWIRE_KEY', 'mw_xxx');
- *   define('METRIXWIRE_ENDPOINT', 'http://localhost:3000');
+ *   define('METRIXWIRE_ENDPOINT', 'https://metrixwire.com');
  *   define('SAVEQUERIES', true); // required for per-query spans
  *
  * SDK autoloading: set METRIXWIRE_AUTOLOAD to your composer autoload.php, or
@@ -39,7 +39,7 @@ if (! class_exists(MetrixWire::class)) {
 
 MetrixWire::init([
     'apiKey' => defined('METRIXWIRE_KEY') ? (string) METRIXWIRE_KEY : (string) (getenv('METRIXWIRE_KEY') ?: ''),
-    'endpoint' => defined('METRIXWIRE_ENDPOINT') ? (string) METRIXWIRE_ENDPOINT : (string) (getenv('METRIXWIRE_ENDPOINT') ?: 'http://localhost:3000'),
+    'endpoint' => defined('METRIXWIRE_ENDPOINT') ? (string) METRIXWIRE_ENDPOINT : (string) (getenv('METRIXWIRE_ENDPOINT') ?: 'https://metrixwire.com'),
     'enabled' => defined('METRIXWIRE_ENABLED') ? (bool) METRIXWIRE_ENABLED : true,
 ]);
 

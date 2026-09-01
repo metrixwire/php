@@ -57,7 +57,7 @@ $metrixwireEnv = static function (string $key, ?string $default = null): ?string
 
 MetrixWire::init([
     'apiKey' => $metrixwireEnv('METRIXWIRE_KEY', ''),
-    'endpoint' => $metrixwireEnv('METRIXWIRE_ENDPOINT', 'http://localhost:3000'),
+    'endpoint' => $metrixwireEnv('METRIXWIRE_ENDPOINT', 'https://metrixwire.com'),
     'enabled' => filter_var($metrixwireEnv('METRIXWIRE_ENABLED', 'true'), FILTER_VALIDATE_BOOLEAN),
 ]);
 

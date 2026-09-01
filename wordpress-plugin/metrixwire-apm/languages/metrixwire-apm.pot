@@ -1,0 +1,905 @@
+# Copyright (C) 2026 PlatkaDigital
+# This file is distributed under the MIT license.
+msgid ""
+msgstr ""
+"Project-Id-Version: MetrixWire APM 1.2.0\n"
+"Report-Msgid-Bugs-To: https://metrixwire.com\n"
+"Last-Translator: PlatkaDigital <hello@platkadigital.com>\n"
+"Language-Team: PlatkaDigital <hello@platkadigital.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-28T00:00:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: makepot.php\n"
+"X-Domain: metrixwire-apm\n"
+
+#. translators: 1: currency code, 2: monthly price.
+#: includes/views/account.php:133
+msgid "%1$s %2$s / month"
+msgstr ""
+
+#. translators: 1: number of issues, 2: severity label, 3: date.
+#: includes/class-view.php:161
+msgid "%1$s %2$s on %3$s"
+msgstr ""
+
+#. translators: 1: traces used this month, 2: monthly trace allowance.
+#: includes/views/account.php:148 includes/views/dashboard.php:135
+msgid "%1$s of %2$s traces this month"
+msgstr ""
+
+#. translators: %s: human-readable time difference, e.g. "5 mins".
+#: includes/class-view.php:74
+msgid "%s ago"
+msgstr ""
+
+#. translators: %s: request duration in milliseconds.
+#: includes/views/issue-detail.php:95
+msgid "%s ms"
+msgstr ""
+
+#. translators: %s: number of traces recorded this month.
+#: includes/views/account.php:160
+msgid "%s traces this month — no limit on this plan."
+msgstr ""
+
+#. translators: %s: signed difference against the previous 7-day window, e.g. "+4" or "−2".
+#: includes/class-view.php:104
+msgid "%s vs previous 7 days"
+msgstr ""
+
+#: includes/views/setup.php:69
+msgid "A MetrixWire workspace is created for this site automatically — no email address or password needed to get going. You can add those later from the Account screen, whenever you want to sign in on the web."
+msgstr ""
+
+#: includes/views/issues.php:95
+msgid "A quiet site is a good sign — widen the time range if you expected results."
+msgstr ""
+
+#: includes/views/setup.php:145
+msgid "A workspace and a project are created for this site, with their own API key."
+msgstr ""
+
+#: includes/views/settings.php:118
+msgid "API key"
+msgstr ""
+
+#: includes/class-actions.php:266
+msgid "API key rotated. This site is already using the new one."
+msgstr ""
+
+#: includes/views/settings.php:81
+msgid "Accept traces in MetrixWire"
+msgstr ""
+
+#: includes/views/dashboard.php:107
+msgid "Accepting traces"
+msgstr ""
+
+#: includes/class-admin.php:94 includes/views/settings.php:97 includes/views/settings.php:184
+msgid "Account"
+msgstr ""
+
+#: includes/class-admin.php:94 includes/views/account.php:17
+msgid "Account & plan"
+msgstr ""
+
+#: includes/class-actions.php:181
+msgid "Account updated."
+msgstr ""
+
+#: includes/class-actions.php:180
+msgid "Account updated. Check that inbox for a verification link."
+msgstr ""
+
+#: includes/views/alerts.php:113
+msgid "Account-wide rule — edit it in MetrixWire."
+msgstr ""
+
+#: includes/views/alerts.php:86
+msgid "Actions"
+msgstr ""
+
+#: includes/views/alerts.php:106
+msgid "Active"
+msgstr ""
+
+#: includes/views/alerts.php:33
+msgid "Add a rule"
+msgstr ""
+
+#: includes/views/setup.php:148
+msgid "Add an email and password whenever you like, under Account."
+msgstr ""
+
+#: includes/views/alerts.php:69
+msgid "Add rule"
+msgstr ""
+
+#: includes/class-actions.php:293
+msgid "Alert rule added."
+msgstr ""
+
+#: includes/class-actions.php:313
+msgid "Alert rule deleted."
+msgstr ""
+
+#: includes/class-actions.php:324
+msgid "Alert rule paused."
+msgstr ""
+
+#: includes/class-actions.php:323
+msgid "Alert rule resumed."
+msgstr ""
+
+#: includes/class-admin.php:92
+msgid "Alert rules"
+msgstr ""
+
+#: includes/class-admin.php:92 includes/views/alerts.php:17
+msgid "Alerts"
+msgstr ""
+
+#: includes/views/issues.php:47
+msgid "All severities"
+msgstr ""
+
+#: includes/views/issues.php:63
+msgid "All time"
+msgstr ""
+
+#: includes/views/setup.php:98
+msgid "Already have a MetrixWire account? Sign in instead."
+msgstr ""
+
+#: includes/views/account.php:118
+msgid "Anyone who can administer this WordPress site can open this MetrixWire account with the button above."
+msgstr ""
+
+#: includes/views/account.php:82
+msgid "At least 8 characters."
+msgstr ""
+
+#: includes/views/issue-detail.php:41
+msgid "Back to issues"
+msgstr ""
+
+#. translators: 1: link to the terms of service, 2: link to the privacy policy.
+#: includes/views/setup.php:88
+msgid "By starting, you agree to the %1$s and %2$s, and to this site sending MetrixWire the performance data described on the right."
+msgstr ""
+
+#: includes/views/account.php:72
+msgid "Changing it sends a verification link to the new address."
+msgstr ""
+
+#: includes/views/setup.php:124
+msgid "Checked against MetrixWire and never stored on this site."
+msgstr ""
+
+#: includes/views/dashboard.php:103 includes/views/settings.php:52
+msgid "Collection"
+msgstr ""
+
+#: includes/class-admin.php:81 includes/class-admin.php:124
+msgid "Connect"
+msgstr ""
+
+#: includes/class-admin.php:80 includes/views/setup.php:47
+msgid "Connect MetrixWire"
+msgstr ""
+
+#: includes/class-ajax.php:74
+msgid "Connected — MetrixWire accepted the request."
+msgstr ""
+
+#: assets/admin.js:43
+msgid "Connected."
+msgstr ""
+
+#. translators: %s: the MetrixWire project name this site is now sending to.
+#: includes/class-actions.php:134
+msgid "Connected. This site now reports to the “%s” project — traces start with the next page view."
+msgstr ""
+
+#: includes/views/setup.php:106
+msgid "Connects this site to an account you already have. If this site was connected before, it picks up the same project and its history."
+msgstr ""
+
+#. translators: %s: the underlying HTTP error reported by WordPress.
+#: includes/class-client.php:154
+msgid "Could not reach MetrixWire: %s"
+msgstr ""
+
+#: includes/views/settings.php:92
+msgid "Credentials"
+msgstr ""
+
+#: includes/views/settings.php:168
+msgid "Current status:"
+msgstr ""
+
+#: includes/class-admin.php:90 includes/class-admin.php:123
+msgid "Dashboard"
+msgstr ""
+
+#: includes/views/settings.php:155
+msgid "Database query capture"
+msgstr ""
+
+#: includes/views/alerts.php:121
+msgid "Delete"
+msgstr ""
+
+#: includes/views/alerts.php:47 includes/views/alerts.php:83
+msgid "Destination"
+msgstr ""
+
+#: includes/views/setup.php:147
+msgid "Detected issues appear right here in wp-admin, minutes later."
+msgstr ""
+
+#: includes/views/issue-detail.php:56
+msgid "Detector"
+msgstr ""
+
+#: includes/views/dashboard.php:118
+msgid "Disabled"
+msgstr ""
+
+#: includes/views/alerts.php:41
+msgid "Email"
+msgstr ""
+
+#: includes/views/account.php:64 includes/views/setup.php:115
+msgid "Email address"
+msgstr ""
+
+#: includes/views/account.php:49
+msgid "Email not verified yet."
+msgstr ""
+
+#: includes/views/dashboard.php:116
+msgid "Enabled"
+msgstr ""
+
+#: includes/views/settings.php:101
+msgid "Endpoint"
+msgstr ""
+
+#: includes/class-actions.php:165
+msgid "Enter an email address or a password to change."
+msgstr ""
+
+#: includes/class-actions.php:105
+msgid "Enter the email and password of your MetrixWire account."
+msgstr ""
+
+#: includes/views/setup.php:146
+msgid "Every request is traced from the next page view — no code changes."
+msgstr ""
+
+#: includes/views/alerts.php:58
+msgid "Everything"
+msgstr ""
+
+#: includes/views/issues.php:20
+msgid "Everything MetrixWire has detected on this site."
+msgstr ""
+
+#: includes/views/settings.php:19
+msgid "Everything about this site’s monitoring, editable here."
+msgstr ""
+
+#: includes/views/account.php:50
+msgid "Everything keeps working — follow the link in the email MetrixWire sent to confirm the address."
+msgstr ""
+
+#: assets/admin.js:44
+msgid "Failed."
+msgstr ""
+
+#: includes/views/issues.php:89
+msgid "Filter"
+msgstr ""
+
+#: includes/views/issue-detail.php:64
+msgid "First seen"
+msgstr ""
+
+#: includes/views/account.php:129
+msgid "Free"
+msgstr ""
+
+#: includes/views/alerts.php:84
+msgid "From severity"
+msgstr ""
+
+#: includes/views/alerts.php:19
+msgid "Get told when MetrixWire detects something on this site."
+msgstr ""
+
+#: includes/class-view.php:34 includes/views/dashboard.php:84
+msgid "High"
+msgstr ""
+
+#: includes/views/alerts.php:56
+msgid "High only"
+msgstr ""
+
+#: includes/views/dashboard.php:56
+msgid "High severity"
+msgstr ""
+
+#: includes/views/settings.php:57
+msgid "How this site is labelled in MetrixWire."
+msgstr ""
+
+#: includes/class-ajax.php:41
+msgid "Insufficient permissions."
+msgstr ""
+
+#: includes/class-ajax.php:94
+msgid "Invalid API key."
+msgstr ""
+
+#: includes/views/dashboard.php:155 includes/views/issues.php:101
+msgid "Issue"
+msgstr ""
+
+#: includes/views/issue-detail.php:17
+msgid "Issue detail"
+msgstr ""
+
+#: includes/class-admin.php:91 includes/views/issues.php:18
+msgid "Issues"
+msgstr ""
+
+#: includes/views/dashboard.php:55
+msgid "Issues (7 days)"
+msgstr ""
+
+#: includes/views/settings.php:149
+msgid "Issues a new key and stores it here in one step."
+msgstr ""
+
+#: includes/views/dashboard.php:74
+msgid "Issues per day"
+msgstr ""
+
+#: includes/class-view.php:134
+msgid "Issues per day over the last 7 days"
+msgstr ""
+
+#: includes/views/setup.php:58
+msgid "Its credential is no longer valid — usually because the site was connected again from somewhere else. Sign in to pick the same project back up. Tracing is unaffected."
+msgstr ""
+
+#: includes/views/alerts.php:63
+msgid "Label"
+msgstr ""
+
+#: includes/views/issues.php:60
+msgid "Last 24 hours"
+msgstr ""
+
+#: includes/views/issues.php:62
+msgid "Last 30 days"
+msgstr ""
+
+#: includes/views/issues.php:61
+msgid "Last 7 days"
+msgstr ""
+
+#: includes/views/issues.php:59
+msgid "Last hour"
+msgstr ""
+
+#: includes/views/issue-detail.php:68 includes/views/issues.php:105
+msgid "Last seen"
+msgstr ""
+
+#: includes/views/dashboard.php:99
+msgid "Last trace"
+msgstr ""
+
+#: includes/views/account.php:81
+msgid "Leave empty to keep the current one"
+msgstr ""
+
+#: includes/class-view.php:36 includes/views/dashboard.php:86
+msgid "Low"
+msgstr ""
+
+#: includes/views/dashboard.php:58
+msgid "Low severity"
+msgstr ""
+
+#: includes/views/account.php:177
+msgid "Manage plan & billing ↗"
+msgstr ""
+
+#: includes/class-view.php:35 includes/views/dashboard.php:85
+msgid "Medium"
+msgstr ""
+
+#: includes/views/alerts.php:57
+msgid "Medium and up"
+msgstr ""
+
+#: includes/views/dashboard.php:57
+msgid "Medium severity"
+msgstr ""
+
+#: includes/class-admin.php:65 includes/views/dashboard.php:18
+msgid "MetrixWire"
+msgstr ""
+
+#: includes/class-admin.php:64
+msgid "MetrixWire APM"
+msgstr ""
+
+#: includes/class-admin.php:90
+msgid "MetrixWire Dashboard"
+msgstr ""
+
+#: includes/class-admin.php:93
+msgid "MetrixWire Settings"
+msgstr ""
+
+#. translators: %d: HTTP status code returned by MetrixWire.
+#: includes/class-client.php:172
+msgid "MetrixWire returned an unexpected response (HTTP %d)."
+msgstr ""
+
+#: includes/class-actions.php:215
+msgid "MetrixWire returned an unexpected sign-in link."
+msgstr ""
+
+#: includes/views/account.php:43
+msgid "Monitoring works without them. Add both below to be able to sign in on metrixwire.com directly, and to recover the account if you lose access to this site."
+msgstr ""
+
+#: includes/views/dashboard.php:180
+msgid "Most affected routes"
+msgstr ""
+
+#: includes/views/issues.php:76
+msgid "Most frequent"
+msgstr ""
+
+#: includes/views/issues.php:75
+msgid "Most recent"
+msgstr ""
+
+#: includes/views/issues.php:77
+msgid "Most severe"
+msgstr ""
+
+#: includes/views/dashboard.php:182
+msgid "No affected routes yet."
+msgstr ""
+
+#: includes/class-actions.php:305
+msgid "No alert rule was selected."
+msgstr ""
+
+#: includes/views/alerts.php:78
+msgid "No alert rules yet — this site is monitored, but nobody is being told."
+msgstr ""
+
+#: includes/views/account.php:104
+msgid "No email set"
+msgstr ""
+
+#: includes/views/issues.php:94
+msgid "No issues match these filters."
+msgstr ""
+
+#: includes/views/dashboard.php:46
+msgid "No traces received yet."
+msgstr ""
+
+#: includes/views/account.php:71
+msgid "Not set yet. Changing it sends a verification link."
+msgstr ""
+
+#: includes/views/account.php:106
+msgid "Not yet"
+msgstr ""
+
+#: includes/views/dashboard.php:150
+msgid "Nothing detected in the last 7 days."
+msgstr ""
+
+#: includes/views/alerts.php:54
+msgid "Notify from"
+msgstr ""
+
+#: includes/views/issue-detail.php:60 includes/views/issues.php:104
+msgid "Occurrences"
+msgstr ""
+
+#: includes/views/setup.php:49
+msgid "One click and this site is monitored. Nothing to fill in, nothing to copy."
+msgstr ""
+
+#. translators: 1: METRIXWIRE_* constant prefix, 2: wp-config.php file name.
+#: includes/views/settings.php:39
+msgid "One or more %1$s constants are defined in %2$s. Those values win, and the fields they cover are shown read-only below."
+msgstr ""
+
+#: includes/views/partials/header.php:55
+msgid "Open MetrixWire ↗"
+msgstr ""
+
+#: includes/views/dashboard.php:47
+msgid "Open any page on this site — the first trace is sent after that request finishes, and issues appear here once enough traffic has been analysed."
+msgstr ""
+
+#: includes/views/alerts.php:65
+msgid "Optional"
+msgstr ""
+
+#: includes/views/account.php:78 includes/views/setup.php:121
+msgid "Password"
+msgstr ""
+
+#: includes/views/alerts.php:119
+msgid "Pause"
+msgstr ""
+
+#: includes/views/alerts.php:108
+msgid "Paused"
+msgstr ""
+
+#: includes/views/dashboard.php:108
+msgid "Paused in MetrixWire"
+msgstr ""
+
+#: includes/views/account.php:181
+msgid "Payment is handled by MetrixWire’s checkout — the button signs you in and takes you straight there."
+msgstr ""
+
+#. translators: 1: SAVEQUERIES constant, 2: wp-config.php file name.
+#: includes/views/settings.php:160
+msgid "Per-query spans require WordPress’s %1$s constant, which can only be set in %2$s — WordPress reads it before plugins load:"
+msgstr ""
+
+#: includes/views/account.php:124 includes/views/dashboard.php:124
+msgid "Plan"
+msgstr ""
+
+#: includes/views/setup.php:90
+msgid "Privacy Policy"
+msgstr ""
+
+#: includes/views/account.php:57
+msgid "Profile"
+msgstr ""
+
+#: includes/views/dashboard.php:95
+msgid "Project"
+msgstr ""
+
+#: includes/views/settings.php:55
+msgid "Project name"
+msgstr ""
+
+#: includes/views/account.php:111
+msgid "Projects"
+msgstr ""
+
+#: includes/views/dashboard.php:113
+msgid "Query spans"
+msgstr ""
+
+#: includes/views/partials/header.php:52
+msgid "Refresh"
+msgstr ""
+
+#: includes/class-actions.php:344
+msgid "Refreshed from MetrixWire."
+msgstr ""
+
+#: assets/admin.js:55
+msgid "Request failed — check the browser console."
+msgstr ""
+
+#: includes/views/alerts.php:120
+msgid "Resume"
+msgstr ""
+
+#: includes/views/settings.php:148
+msgid "Rotate API key"
+msgstr ""
+
+#: includes/views/issue-detail.php:52
+msgid "Route"
+msgstr ""
+
+#: includes/views/issues.php:85
+msgid "Route contains"
+msgstr ""
+
+#: includes/views/issues.php:87
+msgid "Route contains…"
+msgstr ""
+
+#: includes/views/alerts.php:75
+msgid "Rules covering this site"
+msgstr ""
+
+#: includes/views/issue-detail.php:88
+msgid "Sample request"
+msgstr ""
+
+#: includes/views/account.php:89
+msgid "Save & finish setup"
+msgstr ""
+
+#: includes/views/settings.php:87
+msgid "Save changes"
+msgstr ""
+
+#: includes/views/account.php:90
+msgid "Save profile"
+msgstr ""
+
+#: includes/views/dashboard.php:157
+msgid "Seen"
+msgstr ""
+
+#: includes/views/alerts.php:117
+msgid "Send test"
+msgstr ""
+
+#: includes/views/alerts.php:39
+msgid "Send to"
+msgstr ""
+
+#: includes/views/settings.php:63
+msgid "Send traces from this site"
+msgstr ""
+
+#. translators: %s: name of the PHP constant defined in wp-config.php.
+#: includes/views/settings.php:70 includes/views/settings.php:109 includes/views/settings.php:126
+msgid "Set by %s in wp-config.php."
+msgstr ""
+
+#: includes/class-admin.php:93 includes/class-admin.php:132 includes/views/settings.php:17
+msgid "Settings"
+msgstr ""
+
+#: includes/class-actions.php:250
+msgid "Settings saved."
+msgstr ""
+
+#: includes/class-actions.php:115
+msgid "Setup could not be confirmed. Try again from the MetrixWire screen."
+msgstr ""
+
+#: includes/views/dashboard.php:156 includes/views/issues.php:45 includes/views/issues.php:103
+msgid "Severity"
+msgstr ""
+
+#: includes/views/setup.php:128
+msgid "Sign in & connect"
+msgstr ""
+
+#: includes/views/setup.php:104
+msgid "Sign in to MetrixWire"
+msgstr ""
+
+#: includes/views/account.php:187
+msgid "Sign out"
+msgstr ""
+
+#: includes/views/account.php:200
+msgid "Sign out this site"
+msgstr ""
+
+#: includes/views/account.php:197
+msgid "Sign this site out of MetrixWire?"
+msgstr ""
+
+#: includes/class-actions.php:195
+msgid "Signed out. Your MetrixWire project and its history are untouched — connecting again picks them back up."
+msgstr ""
+
+#. translators: %s: link to the plugin's Account screen.
+#: includes/views/settings.php:183
+msgid "Signing this site out of MetrixWire lives on the %s screen."
+msgstr ""
+
+#: includes/views/issues.php:71
+msgid "Sort by"
+msgstr ""
+
+#: includes/views/setup.php:80
+msgid "Start monitoring"
+msgstr ""
+
+#: includes/views/setup.php:67
+msgid "Start monitoring this site"
+msgstr ""
+
+#: includes/views/alerts.php:85
+msgid "Status"
+msgstr ""
+
+#: includes/views/account.php:189
+msgid "Stops tracing and removes this site’s credentials, so you can connect it to a different MetrixWire account. Your project and its history are kept — signing back in picks them up again."
+msgstr ""
+
+#: includes/views/issue-detail.php:81
+msgid "Suggested fix"
+msgstr ""
+
+#: includes/views/setup.php:89
+msgid "Terms of Service"
+msgstr ""
+
+#: includes/class-actions.php:317
+msgid "Test alert sent."
+msgstr ""
+
+#: includes/views/settings.php:139
+msgid "Test connection"
+msgstr ""
+
+#: assets/admin.js:30
+msgid "Testing…"
+msgstr ""
+
+#: includes/views/account.php:19
+msgid "The MetrixWire account this site reports to."
+msgstr ""
+
+#: includes/views/account.php:193
+msgid "This account has no email or password yet, so signing out now would leave no way back into it. Set both above first."
+msgstr ""
+
+#: includes/views/account.php:42
+msgid "This account has no email or password yet."
+msgstr ""
+
+#: includes/class-ajax.php:96
+msgid "This project is inactive."
+msgstr ""
+
+#: includes/views/dashboard.php:91
+msgid "This site"
+msgstr ""
+
+#: includes/class-ajax.php:50
+msgid "This site has no API key yet — connect it first."
+msgstr ""
+
+#: includes/class-client.php:127
+msgid "This site is not connected to MetrixWire yet."
+msgstr ""
+
+#. translators: %s: the MetrixWire endpoint this site will send to.
+#: includes/views/setup.php:158
+msgid "This site sends the HTTP method, path, response status and duration of each request to %s — plus the SQL text and duration of each database query when SAVEQUERIES is enabled. Connecting also sends this site's URL and title, and its WordPress and plugin versions."
+msgstr ""
+
+#: includes/views/setup.php:57
+msgid "This site was signed out of MetrixWire."
+msgstr ""
+
+#: includes/views/issue-detail.php:105
+msgid "This trace has no spans. Enable SAVEQUERIES to capture each database query as its own span."
+msgstr ""
+
+#: includes/views/issues.php:55
+msgid "Time range"
+msgstr ""
+
+#: includes/views/dashboard.php:148
+msgid "Top issues"
+msgstr ""
+
+#: includes/class-ajax.php:95
+msgid "Trace quota exceeded for this project."
+msgstr ""
+
+#: includes/views/partials/header.php:41
+msgid "Tracing active"
+msgstr ""
+
+#: includes/views/partials/header.php:42
+msgid "Tracing paused"
+msgstr ""
+
+#: includes/views/settings.php:83
+msgid "Turning this off makes MetrixWire reject this project’s traces, wherever they come from."
+msgstr ""
+
+#: includes/views/issues.php:102
+msgid "Type"
+msgstr ""
+
+#. translators: %d: HTTP status code returned by the MetrixWire endpoint.
+#: includes/class-ajax.php:99
+msgid "Unexpected response (HTTP %d)."
+msgstr ""
+
+#: includes/class-actions.php:327
+msgid "Unknown action."
+msgstr ""
+
+#: includes/views/account.php:99
+msgid "Verified"
+msgstr ""
+
+#: includes/views/dashboard.php:175
+msgid "View all issues"
+msgstr ""
+
+#: includes/views/alerts.php:42
+msgid "Webhook"
+msgstr ""
+
+#: includes/views/setup.php:153
+msgid "What gets sent"
+msgstr ""
+
+#: includes/views/setup.php:143
+msgid "What happens"
+msgstr ""
+
+#: includes/views/issue-detail.php:77
+msgid "What is happening"
+msgstr ""
+
+#: includes/views/account.php:102
+msgid "Yes"
+msgstr ""
+
+#: includes/class-actions.php:137
+msgid "You are monitored. Traces start with the next page view — add an email and password under Account whenever you want to sign in on the web."
+msgstr ""
+
+#: includes/class-actions.php:378
+msgid "You do not have permission to manage MetrixWire."
+msgstr ""
+
+#: includes/views/settings.php:173
+msgid "disabled"
+msgstr ""
+
+#: includes/views/settings.php:170
+msgid "enabled"
+msgstr ""
+
+#: includes/views/dashboard.php:119
+msgid "how to turn on"
+msgstr ""
+
+#: includes/class-view.php:99
+msgid "no change vs previous 7 days"
+msgstr ""
+
+#: includes/views/settings.php:171
+msgid "queries are being captured."
+msgstr ""
+
+#: includes/views/settings.php:174
+msgid "traces are still sent, without per-query spans."
+msgstr ""
+
+#: includes/views/account.php:67 includes/views/alerts.php:50
+msgid "you@example.com"
+msgstr ""
+
+#: includes/views/issue-detail.php:24
+msgid "← Back to issues"
+msgstr ""
+
+#: includes/views/setup.php:134
+msgid "← Back to one-click setup"
+msgstr ""

@@ -17,7 +17,7 @@ final class MetrixWire
 
     private string $apiKey = '';
 
-    private string $endpoint = 'http://localhost:3000/ingest';
+    private string $endpoint = 'https://metrixwire.com/ingest';
 
     private int $timeoutMs = 3000;
 
