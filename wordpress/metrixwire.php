@@ -2,7 +2,7 @@
 /**
  * Plugin Name: MetrixWire
  * Description: Zero-config APM for WordPress — traces each request and its database queries.
- * Version: 0.1.0
+ * Version: 1.2.1
  * License: MIT
  *
  * Install: drop this file into wp-content/mu-plugins/ (must-use, always active).

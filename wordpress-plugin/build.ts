@@ -114,10 +114,32 @@ function buildZip(files: string[], rootLabel: string): Buffer {
   return Buffer.concat([...localParts, centralBuf, end])
 }
 
+/** The three places WordPress reads a version from must agree, or updates silently break. */
+function pluginVersion(): string {
+  const main = readFileSync(join(SRC_DIR, `${PLUGIN_SLUG}.php`), 'utf8')
+  const readme = readFileSync(join(SRC_DIR, 'readme.txt'), 'utf8')
+  const found = {
+    'plugin header': main.match(/^ \* Version:\s+(\S+)/m)?.[1],
+    'const VERSION': main.match(/const VERSION = '([^']+)'/)?.[1],
+    'readme Stable tag': readme.match(/^Stable tag:\s*(\S+)/m)?.[1],
+  }
+  const missing = Object.entries(found).filter(([, v]) => !v).map(([k]) => k)
+  if (missing.length) throw new Error(`No version found in: ${missing.join(', ')}`)
+
+  const unique = [...new Set(Object.values(found))]
+  if (unique.length > 1) {
+    const detail = Object.entries(found).map(([k, v]) => `${k}=${v}`).join(', ')
+    throw new Error(`Plugin versions disagree (${detail}) — run scripts/bump.sh <X.Y.Z>`)
+  }
+  return unique[0]!
+}
+
+const version = pluginVersion()
+
 const files = listFiles(SRC_DIR)
 const zip = buildZip(files, PLUGIN_SLUG)
 mkdirSync(OUT_DIR, { recursive: true })
 writeFileSync(OUT_FILE, zip)
 
 const repoRoot = join(import.meta.dir, '..', '..', '..')
-console.log(`Built ${relative(repoRoot, OUT_FILE)} (${files.length} files, ${zip.length} bytes)`)
+console.log(`Built ${relative(repoRoot, OUT_FILE)} v${version} (${files.length} files, ${zip.length} bytes)`)

@@ -3,7 +3,7 @@
  * Plugin Name:       MetrixWire APM
  * Plugin URI:        https://metrixwire.com
  * Description:       Zero-config APM for WordPress — create your account, trace every request and its database queries, and read the results without leaving wp-admin.
- * Version:           1.2.0
+ * Version:           1.2.1
  * Requires at least: 6.0
  * Requires PHP:      8.1
  * Author:            PlatkaDigital
@@ -22,7 +22,7 @@ namespace MetrixWire\APM;
 
 defined( 'ABSPATH' ) || exit;
 
-const VERSION = '1.2.0';
+const VERSION = '1.2.1';
 
 define( __NAMESPACE__ . '\PLUGIN_FILE', __FILE__ );
 define( __NAMESPACE__ . '\PLUGIN_DIR', __DIR__ );
