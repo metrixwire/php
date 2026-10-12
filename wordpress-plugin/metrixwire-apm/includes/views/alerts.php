@@ -53,7 +53,8 @@ $metrixwire_apm_rules = is_array( $rules ) ? $rules : array();
 			<p class="mw-field">
 				<label for="mw-alert-severity"><?php esc_html_e( 'Notify from', 'metrixwire-apm' ); ?></label>
 				<select id="mw-alert-severity" name="min_severity">
-					<option value="high"><?php esc_html_e( 'High only', 'metrixwire-apm' ); ?></option>
+					<option value="critical"><?php esc_html_e( 'Critical only', 'metrixwire-apm' ); ?></option>
+					<option value="high"><?php esc_html_e( 'High and up', 'metrixwire-apm' ); ?></option>
 					<option value="medium" selected><?php esc_html_e( 'Medium and up', 'metrixwire-apm' ); ?></option>
 					<option value="low"><?php esc_html_e( 'Everything', 'metrixwire-apm' ); ?></option>
 				</select>

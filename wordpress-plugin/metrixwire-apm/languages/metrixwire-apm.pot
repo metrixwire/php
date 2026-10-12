@@ -217,6 +217,18 @@ msgstr ""
 msgid "Credentials"
 msgstr ""
 
+#: includes/class-view.php:35 includes/views/dashboard.php:85
+msgid "Critical"
+msgstr ""
+
+#: includes/views/alerts.php:56
+msgid "Critical only"
+msgstr ""
+
+#: includes/views/dashboard.php:56
+msgid "Critical severity"
+msgstr ""
+
 #: includes/views/settings.php:168
 msgid "Current status:"
 msgstr ""
@@ -321,15 +333,15 @@ msgstr ""
 msgid "Get told when MetrixWire detects something on this site."
 msgstr ""
 
-#: includes/class-view.php:34 includes/views/dashboard.php:84
+#: includes/class-view.php:36 includes/views/dashboard.php:86
 msgid "High"
 msgstr ""
 
-#: includes/views/alerts.php:56
-msgid "High only"
+#: includes/views/alerts.php:57
+msgid "High and up"
 msgstr ""
 
-#: includes/views/dashboard.php:56
+#: includes/views/dashboard.php:57
 msgid "High severity"
 msgstr ""
 

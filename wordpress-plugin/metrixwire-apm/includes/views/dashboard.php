@@ -53,6 +53,7 @@ $metrixwire_apm_quota      = isset( $metrixwire_apm_plan['maxTracesPerMonth'] ) 
 		<?php
 		$metrixwire_apm_cards = array(
 			array( 'total', __( 'Issues (7 days)', 'metrixwire-apm' ) ),
+			array( 'critical', __( 'Critical severity', 'metrixwire-apm' ) ),
 			array( 'high', __( 'High severity', 'metrixwire-apm' ) ),
 			array( 'medium', __( 'Medium severity', 'metrixwire-apm' ) ),
 			array( 'low', __( 'Low severity', 'metrixwire-apm' ) ),
@@ -81,6 +82,7 @@ $metrixwire_apm_quota      = isset( $metrixwire_apm_plan['maxTracesPerMonth'] ) 
 				<?php echo View::day_labels( $metrixwire_apm_days ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			</div>
 			<p class="mw-legend">
+				<span class="mw-legend__key mw-legend__key--critical"></span><?php esc_html_e( 'Critical', 'metrixwire-apm' ); ?>
 				<span class="mw-legend__key mw-legend__key--high"></span><?php esc_html_e( 'High', 'metrixwire-apm' ); ?>
 				<span class="mw-legend__key mw-legend__key--medium"></span><?php esc_html_e( 'Medium', 'metrixwire-apm' ); ?>
 				<span class="mw-legend__key mw-legend__key--low"></span><?php esc_html_e( 'Low', 'metrixwire-apm' ); ?>

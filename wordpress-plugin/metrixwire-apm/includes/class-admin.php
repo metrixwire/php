@@ -340,7 +340,7 @@ final class Admin {
 			'sort'   => in_array( $sort, array( 'recent', 'occurrences', 'severity' ), true ) ? $sort : 'recent',
 		);
 
-		if ( in_array( $severity, array( 'high', 'medium', 'low' ), true ) ) {
+		if ( in_array( $severity, array( 'critical', 'high', 'medium', 'low' ), true ) ) {
 			$query['severity'] = $severity;
 		}
 		if ( in_array( $since, array( '1h', '24h', '7d', '30d', 'all' ), true ) && 'all' !== $since ) {

@@ -4,7 +4,7 @@ Tags: apm, performance, monitoring, observability, database
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.2.1
+Stable tag: 1.3.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -115,7 +115,26 @@ those from every site in the network.
 The site stops tracing and its credentials are removed. Your MetrixWire project and its history are kept,
 so signing back in later picks that project up instead of starting a new one.
 
+== Screenshots ==
+
+1. Connect: one button creates the account, its project and its API key — no email, no password, no URL to enter.
+2. Dashboard: issue counts and their 7-day trend, a per-day chart, top issues, worst-affected routes and plan usage.
+3. Issues: every detection on this site, filterable by severity, time range and route.
+4. Issue detail: what was detected, a suggested fix, and the sample request with each database query as a waterfall.
+5. Alerts: email or webhook rules for this site, with a test send.
+6. Settings: project name, collection toggles, the endpoint in force, API key rotation and SAVEQUERIES status.
+
 == Changelog ==
+
+= 1.3.0 =
+* New "Critical" severity for requests that are broken — exceptions, 5xx responses and failing
+  external APIs — shown above High on the dashboard, in the issue list filter and the daily chart.
+* Alert rules can be limited to critical issues only; "High only" is now "High and up".
+
+= 1.2.1 =
+* The bundled SDK now defaults to https://metrixwire.com instead of a local address, so a site
+  configured through `wp-config.php` constants alone no longer posts its traces where nothing is
+  listening. Sites that set `METRIXWIRE_ENDPOINT` themselves are unaffected.
 
 = 1.2.0 =
 * Setup is now a single button: the account, project and API key are created with nothing to type — no

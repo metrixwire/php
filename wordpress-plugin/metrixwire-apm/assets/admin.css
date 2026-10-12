@@ -9,7 +9,8 @@
 .metrixwire-apm {
 	--mw-border: #dcdcde;
 	--mw-muted: #646970;
-	--mw-high: #b32d2e;
+	--mw-critical: #8a2424;
+	--mw-high: #d63638;
 	--mw-medium: #bd8600;
 	--mw-low: #2271b1;
 	max-width: 1200px;
@@ -109,7 +110,7 @@
 }
 
 .mw-grid--stats {
-	grid-template-columns: repeat( 4, minmax( 0, 1fr ) );
+	grid-template-columns: repeat( 5, minmax( 0, 1fr ) );
 }
 
 .mw-grid--split {
@@ -131,6 +132,10 @@
 	flex-direction: column;
 	gap: 4px;
 	border-top: 3px solid #c3c4c7;
+}
+
+.mw-stat--critical {
+	border-top-color: var(--mw-critical);
 }
 
 .mw-stat--high {
@@ -202,6 +207,10 @@
 
 .mw-legend__key:first-child {
 	margin-left: 0;
+}
+
+.mw-legend__key--critical {
+	background: var(--mw-critical);
 }
 
 .mw-legend__key--high {
@@ -348,6 +357,10 @@
 	font-weight: 600;
 	color: #fff;
 	white-space: nowrap;
+}
+
+.mw-badge--critical {
+	background: var(--mw-critical);
 }
 
 .mw-badge--high {

@@ -23,18 +23,20 @@ final class View {
 
 	/** Colour per severity, matching the dashboard's own palette. */
 	private const SEVERITY_COLORS = array(
-		'high'   => '#b32d2e',
-		'medium' => '#bd8600',
-		'low'    => '#2271b1',
+		'critical' => '#8a2424',
+		'high'     => '#d63638',
+		'medium'   => '#bd8600',
+		'low'      => '#2271b1',
 	);
 
 	/** Translated severity label. */
 	public static function severity_label( string $severity ): string {
 		return match ( $severity ) {
-			'high'   => __( 'High', 'metrixwire-apm' ),
-			'medium' => __( 'Medium', 'metrixwire-apm' ),
-			'low'    => __( 'Low', 'metrixwire-apm' ),
-			default  => $severity,
+			'critical' => __( 'Critical', 'metrixwire-apm' ),
+			'high'     => __( 'High', 'metrixwire-apm' ),
+			'medium'   => __( 'Medium', 'metrixwire-apm' ),
+			'low'      => __( 'Low', 'metrixwire-apm' ),
+			default    => $severity,
 		};
 	}
 
@@ -109,7 +111,7 @@ final class View {
 	/**
 	 * Stacked column chart of issues per day, as inline SVG.
 	 *
-	 * @param array<int, array<string, mixed>> $days Rows of `{ date, high, medium, low }`.
+	 * @param array<int, array<string, mixed>> $days Rows of `{ date, critical, high, medium, low }`.
 	 */
 	public static function day_chart( array $days ): string {
 		if ( empty( $days ) ) {
@@ -118,7 +120,7 @@ final class View {
 
 		$max = 0;
 		foreach ( $days as $day ) {
-			$max = max( $max, (int) ( $day['high'] ?? 0 ) + (int) ( $day['medium'] ?? 0 ) + (int) ( $day['low'] ?? 0 ) );
+			$max = max( $max, (int) ( $day['critical'] ?? 0 ) + (int) ( $day['high'] ?? 0 ) + (int) ( $day['medium'] ?? 0 ) + (int) ( $day['low'] ?? 0 ) );
 		}
 		// An all-zero week still needs a baseline to draw against.
 		$max = max( $max, 1 );
@@ -138,7 +140,7 @@ final class View {
 			$x       = ( $index * $width ) + $bar_offset;
 			$stacked = 0.0;
 
-			foreach ( array( 'low', 'medium', 'high' ) as $severity ) {
+			foreach ( array( 'low', 'medium', 'high', 'critical' ) as $severity ) {
 				$count = (int) ( $day[ $severity ] ?? 0 );
 
 				if ( 0 === $count ) {

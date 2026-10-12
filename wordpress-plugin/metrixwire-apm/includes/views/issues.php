@@ -45,7 +45,7 @@ $metrixwire_apm_route    = (string) ( $query['route'] ?? '' );
 		<label class="screen-reader-text" for="mw-filter-severity"><?php esc_html_e( 'Severity', 'metrixwire-apm' ); ?></label>
 		<select id="mw-filter-severity" name="severity">
 			<option value=""><?php esc_html_e( 'All severities', 'metrixwire-apm' ); ?></option>
-			<?php foreach ( array( 'high', 'medium', 'low' ) as $metrixwire_apm_option ) : ?>
+			<?php foreach ( array( 'critical', 'high', 'medium', 'low' ) as $metrixwire_apm_option ) : ?>
 				<option value="<?php echo esc_attr( $metrixwire_apm_option ); ?>" <?php selected( $metrixwire_apm_severity, $metrixwire_apm_option ); ?>>
 					<?php echo esc_html( View::severity_label( $metrixwire_apm_option ) ); ?>
 				</option>

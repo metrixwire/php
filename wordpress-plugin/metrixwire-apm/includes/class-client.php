@@ -131,6 +131,9 @@ final class Client {
 			// Reported so the dashboard (and support) can see what a site runs.
 			$headers['X-MetrixWire-Platform-Version'] = get_bloginfo( 'version' );
 			$headers['X-MetrixWire-Plugin-Version']   = VERSION;
+			// Tells the API this plugin renders the `critical` severity; without
+			// it the API folds critical into high for older plugin builds.
+			$headers['X-MetrixWire-Capabilities'] = 'severity-critical';
 		}
 
 		$args = array(
