@@ -86,6 +86,7 @@ final class Actions {
 			'siteName'        => get_bloginfo( 'name' ),
 			'platformVersion' => get_bloginfo( 'version' ),
 			'pluginVersion'   => VERSION,
+			'siteSecret'      => $this->connection->site_secret(),
 		);
 
 		if ( 'signin' === $mode ) {
@@ -118,6 +119,12 @@ final class Actions {
 			$retry           = Admin::url( 'dashboard' );
 			$body['consent'] = true;
 			$result          = $this->client->connect( '/provision', $body );
+
+			// This site's earlier account has an email and password now, so a
+			// one-click reconnect is refused — send them to sign in instead.
+			if ( is_wp_error( $result ) && 'metrixwire_site_claimed' === $result->get_error_code() ) {
+				$this->fail( $result->get_error_message(), Admin::url( 'dashboard', array( 'mode' => 'signin' ) ) );
+			}
 		}
 
 		if ( is_wp_error( $result ) ) {

@@ -4,7 +4,7 @@ Tags: apm, performance, monitoring, observability, database
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -125,6 +125,15 @@ so signing back in later picks that project up instead of starting a new one.
 6. Settings: project name, collection toggles, the endpoint in force, API key rotation and SAVEQUERIES status.
 
 == Changelog ==
+
+= 1.3.1 =
+* Signing a site out and pressing "Start monitoring" again now reconnects it to the same MetrixWire
+  account and project instead of creating a second account. The plugin keeps a random install secret
+  for this that signing out does not clear; uninstalling removes it like every other setting.
+* If that account has since been given an email and password, the setup screen asks you to sign in
+  with them instead.
+* "Already have a MetrixWire account?" now has its own card on the setup screen, so sites belonging to
+  someone who already signed up on the web are easier to connect to that account.
 
 = 1.3.0 =
 * New "Critical" severity for requests that are broken — exceptions, 5xx responses and failing

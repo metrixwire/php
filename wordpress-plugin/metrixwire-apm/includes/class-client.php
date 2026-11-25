@@ -134,6 +134,9 @@ final class Client {
 			// Tells the API this plugin renders the `critical` severity; without
 			// it the API folds critical into high for older plugin builds.
 			$headers['X-MetrixWire-Capabilities'] = 'severity-critical';
+			// Lets a site connected before install secrets existed register one,
+			// so its next reconnect finds the same project.
+			$headers['X-MetrixWire-Site-Secret'] = $this->connection->site_secret();
 		}
 
 		$args = array(

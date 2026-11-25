@@ -190,7 +190,7 @@ $metrixwire_apm_provisional = ! empty( $metrixwire_apm_owner['isProvisional'] );
 		</p>
 		<?php if ( $metrixwire_apm_provisional ) : ?>
 			<p class="description mw-warn">
-				<?php esc_html_e( 'This account has no email or password yet, so signing out now would leave no way back into it. Set both above first.', 'metrixwire-apm' ); ?>
+				<?php esc_html_e( 'This account has no email or password yet. After signing out, the only way back into it is “Start monitoring” on this same site — set both above first if you might need it from anywhere else.', 'metrixwire-apm' ); ?>
 			</p>
 		<?php endif; ?>
 		<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>"

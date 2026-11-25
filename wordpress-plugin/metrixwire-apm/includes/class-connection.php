@@ -29,6 +29,7 @@ final class Connection {
 	public const OPT_SITE_TOKEN = 'metrixwire_apm_site_token';
 	public const OPT_PROJECT_ID = 'metrixwire_apm_project_id';
 	public const OPT_EMAIL      = 'metrixwire_apm_account_email';
+	public const OPT_SECRET     = 'metrixwire_apm_site_secret';
 
 	/**
 	 * The hosted service. Sites connect here unless they point the plugin at
@@ -74,6 +75,7 @@ final class Connection {
 			self::OPT_SITE_TOKEN,
 			self::OPT_PROJECT_ID,
 			self::OPT_EMAIL,
+			self::OPT_SECRET,
 		);
 	}
 
@@ -144,6 +146,26 @@ final class Connection {
 
 	public function project_id(): string {
 		return (string) get_option( self::OPT_PROJECT_ID, '' );
+	}
+
+	/**
+	 * This installation's secret, generated on first use.
+	 *
+	 * MetrixWire keeps only its hash, next to the project this site created.
+	 * Signing out never clears it, so "Start monitoring" on the same site finds
+	 * that project and its account again instead of creating a second one.
+	 * Uninstalling removes it like every other option.
+	 */
+	public function site_secret(): string {
+		$secret = (string) get_option( self::OPT_SECRET, '' );
+
+		if ( '' === $secret ) {
+			$secret = wp_generate_password( 48, false, false );
+			// Not autoloaded: it is only read on the few calls that talk to MetrixWire.
+			update_option( self::OPT_SECRET, $secret, false );
+		}
+
+		return $secret;
 	}
 
 	/** The MetrixWire account this site is paired with, for display only. */

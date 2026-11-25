@@ -93,9 +93,21 @@ require __DIR__ . '/partials/header.php';
 						</p>
 					</form>
 
-					<p class="mw-alt">
-						<a href="<?php echo esc_url( Admin::url( 'dashboard', array( 'mode' => 'signin' ) ) ); ?>">
-							<?php esc_html_e( 'Already have a MetrixWire account? Sign in instead.', 'metrixwire-apm' ); ?>
+				</div>
+
+				<?php
+				// A card of its own, not a footnote: someone who already signed up on
+				// the web and clicks the big button above ends up with a second,
+				// separate account for this site.
+				?>
+				<div class="mw-card">
+					<h2><?php esc_html_e( 'Already have a MetrixWire account?', 'metrixwire-apm' ); ?></h2>
+					<p class="description">
+						<?php esc_html_e( 'Connect this site to it instead, so it shares that account’s plan and dashboard. “Start monitoring” above gives this site an account of its own.', 'metrixwire-apm' ); ?>
+					</p>
+					<p class="mw-actions">
+						<a class="button button-secondary" href="<?php echo esc_url( Admin::url( 'dashboard', array( 'mode' => 'signin' ) ) ); ?>">
+							<?php esc_html_e( 'Sign in & connect', 'metrixwire-apm' ); ?>
 						</a>
 					</p>
 				</div>
